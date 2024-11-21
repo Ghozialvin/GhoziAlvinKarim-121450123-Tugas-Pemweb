@@ -1,0 +1,188 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+}
+
+.background {
+    background-image: url(result.jpg);
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    animation: fadeIn 3s ease forwards;
+}
+
+.container {
+    max-width: 800px;
+    width: 90%;
+    margin: 50px auto;
+    background: #00224D;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 2s ease forwards;
+}
+
+/* Heading */
+h2 {
+    text-align: center;
+    color: #DEAA79;
+    margin-bottom: 20px;
+    font-family: "DynaPuff", "system-ui";
+    font-size: 30px;
+}
+h3 {
+    text-align: left;
+    color: #DEAA79;
+    margin-bottom: 20px;
+    font-family: "DynaPuff", "system-ui";
+    font-size: 30px;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table th,
+table td {
+    text-align: left;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    font-size: 1rem;
+    font-family: "DynaPuff", "system-ui";
+}
+
+table th {
+    background-color: #FFC700;
+    color: #000000;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+table td {
+    background-color: #f9f9f9;
+}
+
+/* File Content */
+.file-content {
+    background: #f4f4f4;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow-x: auto;
+    font-family: "DynaPuff", "system-ui";
+    color: #444;
+}
+
+/* Button Styling */
+.button {
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+/* Animasi fade-in untuk seluruh elemen */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInText {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsiveness */
+/* Tablet Landscape and Below */
+@media screen and (max-width: 1024px) {
+    h2, h3 {
+        font-size: 24px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    table th,
+    table td {
+        font-size: 0.9rem;
+    }
+}
+
+/* Tablet Portrait and Below */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    table th,
+    table td {
+        font-size: 0.85rem;
+        padding: 8px;
+    }
+
+    h2, h3 {
+        font-size: 22px;
+    }
+
+    .button {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+}
+
+/* Mobile Phones */
+@media screen and (max-width: 480px) {
+    h2, h3 {
+        font-size: 18px;
+    }
+
+    table th,
+    table td {
+        font-size: 0.8rem;
+        padding: 6px;
+    }
+
+    .container {
+        width: 95%;
+        margin: 20px auto;
+        padding: 10px;
+    }
+
+    .button {
+        font-size: 12px;
+        padding: 7px 10px;
+    }
+}
